@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste Calculadora by "Sesa"</title>
+</head>
+<body>
+  <h1>Teste Calculadora by "Sesa"</h1>
+
+  <!-- Lugar para digitar os números -->
+  <label>Digitar o primeiro número:</label>
+  <input type="number" id="numero1"><br><br>
+
+  <label>Digitar o segundo número:</label>
+  <input type="number" id="numero2"><br><br>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <h2>Resultados:</h2>
+  <p id="resultadoSoma"></p>
+  <p id="resultadoSubtracao"></p>
+  <p id="resultadoMultiplicacao"></p>
+  <p id="resultadoDivisao"></p>
+
+  <script>
+    function calcular() {
+
+      let numero1 = parseFloat(document.getElementById("numero1").value);
+      let numero2 = parseFloat(document.getElementById("numero2").value);
+
+      let soma = numero1 + numero2;
+      let subtracao = numero1 - numero2;
+      let multiplicacao = numero1 * numero2;
+
+      let divisao;
+      if (numero2 !== 0) {
+        divisao = numero1 / numero2;
+      } else {
+        divisao = "Erro: não é possível dividir por zero!";
+      }
+
+      // Resultados na página
+      document.getElementById("resultadoSoma").innerText = "Soma: " + soma;
+      document.getElementById("resultadoSubtracao").innerText = "Subtração: " + subtracao;
+      document.getElementById("resultadoMultiplicacao").innerText = "Multiplicação: " + multiplicacao;
+      document.getElementById("resultadoDivisao").innerText = "Divisão: " + divisao;
+    }
+  </script>
+</body>
+</html>

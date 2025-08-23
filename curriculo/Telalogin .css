@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.interface {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+}
+
+.interface .containerForm {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 70px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 20px;
+  transition: .4s all ease-in;
+}
+
+.containerForm .contentText {
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.contentText h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.contentText p {
+  margin-top: 5px;
+  font-size: .9rem;
+}
+
+.contentText a {
+  color: #4285F4;
+}
+
+form {
+  width: 70%;
+}
+
+form .contentField {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+
+form .contentField + .contentField {
+  margin-top: 1rem;
+}
+
+.contentField .field {
+  width: 100%;
+  height: 40px;
+  padding-left: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contentField .field:focus {
+  border: 1px solid #4285F4;
+}
+
+.contentField a {
+  color: #4285F4;
+  margin-top: 5px;
+  font-size: .8rem;
+}
+
+form .btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: #4285F4;
+}
+
+.containerForm span {
+  color: #898F9C;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+}
+
+.containerForm .social {
+  display: flex;
+}
+
+.social svg {
+  cursor: pointer;
+}
+
+.social svg + svg {
+  margin-left: .6rem;
+}
+
+.interface .copy {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  color: #696969;
+}
+
+@media screen and (max-width: 500px) {
+  .interface .containerForm {
+    height: 100vh;
+    border-radius: 0;
+    padding: 30px 40px;
+    justify-content: center;
+  }
+  .containerForm .contentText {
+    width: 95%;
+  }
+  form {
+    width: 95%;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .interface .copy {
+    left: initial;
+    right: 2rem;
+    bottom: 30px;
+    transform: none;
+  }
+}
